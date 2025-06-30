@@ -120,9 +120,27 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onStart }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
-          className="absolute bottom-8 text-white/40 text-sm"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-4"
         >
-          Press START to begin your quiz adventure!
+          <p className="text-white/40 text-sm">Press START to begin your quiz adventure!</p>
+          
+          {/* Built with Bolt.new Badge */}
+          <motion.a
+            href="https://bolt.new"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2 }}
+            className="group flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 transition-all duration-300 hover:scale-105"
+          >
+            <div className="w-5 h-5 bg-gradient-to-r from-orange-400 to-pink-500 rounded-full flex items-center justify-center">
+              <Sparkles className="w-3 h-3 text-white" />
+            </div>
+            <span className="text-white/70 group-hover:text-white text-sm font-medium">
+              Built with Bolt.new
+            </span>
+          </motion.a>
         </motion.div>
       </div>
     </div>
